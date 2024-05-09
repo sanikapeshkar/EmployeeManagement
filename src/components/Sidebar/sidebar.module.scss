@@ -1,0 +1,17 @@
+.Sidebar{
+    flex:1;
+    margin:1rem;
+    background-color: aliceblue;
+    padding:1rem;
+   border-radius: 5px;
+   box-shadow: 2px 2px 2px 2px gray;
+    display: flex;
+    flex-direction: column;
+    gap:0.5rem;
+
+    .ItemEach{
+        padding:1rem;
+        border-radius:5px;
+        box-shadow: 2px 2px 1px 1px rgb(199, 199, 199);
+    }
+}
