@@ -10,7 +10,7 @@ export default function Main() {
   const getEmployeeData = async () => {
     try {
       const response = await axios.get<Data[]>(
-        "https://jsonplaceholder.typicode.com/users",{headers: {
+        "https://dbeb-47-247-159-210.ngrok-free.app/",{headers: {
           "ngrok-skip-browser-warning": "skip-browser-warning",
         },}
       );
@@ -20,9 +20,24 @@ export default function Main() {
       console.log(error);
     }
   };
-
+const getNames= async () => {
+  try {
+    const response = await axios.get<Data[]>(
+      "https://dbeb-47-247-159-210.ngrok-free.app/",{headers: {
+        "ngrok-skip-browser-warning": "skip-browser-warning",
+      },}
+    );
+    setData(response.data);
+    console.log(response.data);
+  } catch (error) {
+    console.log(error);
+  }
+};
   useEffect(() => {
     getEmployeeData();
+  }, []);
+  useEffect(() => {
+    getNames();
   }, []);
 
   function handleClick(id: number) {
@@ -30,12 +45,12 @@ export default function Main() {
   }
 
   function handlePrevious(id: number) {
-    if (id > 0) {
+    if (id > 0 ) {
       --id;
+      setclickedId(id);
     }
-
-    setclickedId(id);
   }
+  
   function handleNext(id: number) {
     ++id;
     setclickedId(id);

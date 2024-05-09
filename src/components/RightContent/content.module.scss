@@ -14,6 +14,8 @@
   flex-direction: row;
 
   .Main {
+    min-width:90%;
+      max-width:90% ;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -26,6 +28,7 @@
       justify-content: space-between;
       gap: 10rem;
       flex: 3;
+      
 
       .Right {
         display: flex;
@@ -38,6 +41,7 @@
     }
 
     .ButtonContainer {
+      min-width:80%;
       display: flex;
       justify-content: space-between;
       flex-direction: row;
