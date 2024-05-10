@@ -10,7 +10,7 @@ export default function Main() {
   const getEmployeeData = async () => {
     try {
       const response = await axios.get<Data[]>(
-        "https://dbeb-47-247-159-210.ngrok-free.app/",{headers: {
+        "https://jsonplaceholder.typicode.com/users",{headers: {
           "ngrok-skip-browser-warning": "skip-browser-warning",
         },}
       );
